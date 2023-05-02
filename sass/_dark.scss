@@ -1,0 +1,41 @@
+.dark{
+    background-color: $vdarkblue;
+    .upper{
+        background-image: url(../images/bg-desktop-dark.jpg);
+        &__search{
+            input{
+                background-color: $vdarkdeblue;
+            }
+        }
+        &__options{
+            background-color: $vdarkdeblue;
+            box-shadow: 2px 2px $darkgrayishblue;
+            border: 0.5px solid $vdarkgrayish;
+
+            &--tasks{
+                input{
+                    background-color: $vdarkdeblue;
+                }
+                label{
+                    color: $lgrayishblueho;
+                }
+            }
+            &--opt{
+                color: $vdarkgrayish;
+            }
+        }
+    }
+    .centeroption{
+        &:hover{
+            color: $lgrayishblueho;
+        }
+    }
+    .clearAll:hover{
+        color: $lgrayishblueho;
+    }
+    @media (max-width:800px){
+    .upper{
+        background-image: url(../images/bg-mobile-dark.jpg);
+    }
+    }
+}

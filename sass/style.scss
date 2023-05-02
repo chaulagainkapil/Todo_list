@@ -1,0 +1,182 @@
+@import "./variables";
+@import "./dark";
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: $font__Josefin;
+  font-size: $font_size1;
+}
+.container {
+  margin: 0 30%;
+  position: relative;
+}
+.lightmode{
+    position: absolute;
+    right: 0px;
+    display:none
+}
+.upper {
+  height: 35vh;
+  background-image: url(../images/bg-desktop-light.jpg);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 75px 0 60px;
+    h1 {
+      font-size: 36px;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      color: $vlgrayishblue;
+    }
+    img {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+  }
+  &__search {
+    text-align: center;
+    input {
+      width: 100%;
+      padding: 20px 40px;
+      background-image: url(../images/icon-circle.svg);
+      background-repeat: no-repeat;
+      background-position: 10px 15px;
+      font-family: $font__Josefin;
+      color: $dgrayishblue;
+      font-size: $font_size1;
+      font-weight: $font__regular;
+      border-radius: 4px;
+      outline: none;
+      box-sizing: border-box;
+    }
+  }
+  &__options {
+    border: 0.5px solid $dgrayishblue;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    top: 260px;
+    border-radius: 4px;
+    box-shadow: 2px 2px $lgrayishblue;
+    &--tasks {
+      border-bottom: 1px solid $dgrayishblue;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1rem;
+      input {
+        height: 18px;
+        width: 18px;
+        border-radius: 100%;
+        border: 0.5px solid $dgrayishblue;
+        outline: none;
+        cursor: pointer;
+      }
+      label {
+        color: $vdgrayishblue;
+        text-transform: capitalize;
+        width: 85%;
+        cursor: pointer;
+        &::selection {
+          color: none;
+          background: none;
+        }
+      }
+      &::selection {
+        color: none;
+        background: none;
+      }
+    }
+    &--opt {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: $dgrayishblue;
+      padding: 20px;
+      & > div {
+        cursor: pointer;
+      }
+      &--left{
+        cursor: auto!important;
+      }
+      &--center {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+  }
+}
+.active {
+  cursor: pointer;
+  &.upper__options--tasks {
+    input {
+      background-image: url(../images/icon-check.svg),
+        linear-gradient(to bottom right, $gradient1, $gradient2);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    label {
+      color: $dgrayishblue;
+      text-decoration: line-through;
+    }
+  }
+}
+.crossButton {
+  cursor: pointer;
+  display: none;
+}
+.upper__options--tasks:hover .crossButton {
+  display: block;
+}
+.disable-select {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+.active2{
+    color: $brightblue;
+}
+.centeroption{
+    &:hover{
+        color: $vdgrayishblue;
+    }
+}
+.clearAll:hover{
+    color: $vdgrayishblue;
+}
+
+@media (max-width:800px){
+    .container {
+        margin: 0 8%;
+        position: relative;
+    }
+    .upper{
+        background-image: url(../images/bg-mobile-light.jpg);
+        &__heading{
+            padding: 3rem 0 24px;
+        }
+        &__options{
+            top: 185px;
+            &--opt{
+                &--center{
+                    display: none;
+                }
+            }
+        }
+    }
+.crossButton{
+    display: block!important;
+}
+
+}

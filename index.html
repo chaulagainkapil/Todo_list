@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="main.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo app</title>
+  </head>
+  <body class="">
+    <div class="upper">
+      <div class="container">
+        <div class="upper__heading">
+          <h1>To do</h1>
+          <img class="darkmode" src="./images/icon-moon.svg" alt="dark-mode" />
+          <img class="lightmode" src="./images/icon-sun.svg" alt="light-mode"/>
+        </div>
+        <div class="upper__search">
+          <input type="text" id="text" placeholder="Create a new task" />
+        </div>
+        <div class="upper__options disable-select" id="sortable">
+          <div class="upper__options--opt">
+            <div class="upper__options--opt--left">
+              <p>
+                <span class="numberItems">0</span>
+                items left
+              </p>
+            </div>
+            <div class="upper__options--opt--center">
+              <p class="centeroption optionAll active2">All</p>
+              <p class="centeroption optionActive">Active</p>
+              <p class="centeroption optionCompleted">Completed</p>
+            </div>
+            <div class="upper__options--opt--right">
+              <p class="clearAll">Clear Completed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
