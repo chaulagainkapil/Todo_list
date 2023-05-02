@@ -121,6 +121,7 @@ body {
   border: 0.5px solid hsl(236, 9%, 61%);
   outline: none;
   cursor: pointer;
+  pointer-events: none;
 }
 .upper__options--tasks label {
   color: hsl(235, 19%, 35%);

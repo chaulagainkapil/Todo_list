@@ -80,6 +80,7 @@ body {
         border: 0.5px solid $dgrayishblue;
         outline: none;
         cursor: pointer;
+        pointer-events: none;
       }
       label {
         color: $vdgrayishblue;
