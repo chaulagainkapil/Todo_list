@@ -197,6 +197,10 @@ body {
   color: hsl(235, 19%, 35%);
 }
 
+.numberItems {
+  color: hsl(233, 11%, 84%);
+}
+
 @media screen and (max-width: 1200px) {
   .container {
     margin: 0 20%;
