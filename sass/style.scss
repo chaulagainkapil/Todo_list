@@ -12,10 +12,10 @@ body {
   margin: 0 30%;
   position: relative;
 }
-.lightmode{
-    position: absolute;
-    right: 0px;
-    display:none
+.darkmode {
+  position: absolute;
+  right: 0px;
+  display: none;
 }
 .upper {
   height: 35vh;
@@ -106,8 +106,8 @@ body {
       & > div {
         cursor: pointer;
       }
-      &--left{
-        cursor: auto!important;
+      &--left {
+        cursor: auto !important;
       }
       &--center {
         display: flex;
@@ -139,45 +139,60 @@ body {
   display: block;
 }
 .disable-select {
-    user-select: none; /* supported by Chrome and Opera */
-   -webkit-user-select: none; /* Safari */
-   -khtml-user-select: none; /* Konqueror HTML */
-   -moz-user-select: none; /* Firefox */
-   -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 }
-.active2{
-    color: $brightblue;
+.active2 {
+  color: $brightblue;
 }
-.centeroption{
-    &:hover{
-        color: $vdgrayishblue;
-    }
-}
-.clearAll:hover{
+.centeroption {
+  &:hover {
     color: $vdgrayishblue;
+  }
+}
+.clearAll:hover {
+  color: $vdgrayishblue;
 }
 
-@media (max-width:800px){
+@media screen and (max-width:1200px){
     .container {
-        margin: 0 8%;
+        margin: 0 20%;
         position: relative;
-    }
-    .upper{
-        background-image: url(../images/bg-mobile-light.jpg);
+      }
+      .upper{
         &__heading{
-            padding: 3rem 0 24px;
+            padding: 4rem 0 1rem;
         }
         &__options{
-            top: 185px;
-            &--opt{
-                &--center{
-                    display: none;
-                }
-            }
+            top: 200px;
         }
-    }
-.crossButton{
-    display: block!important;
+      }
 }
-
+@media screen and (max-width: 800px) {
+  .container {
+    margin: 0 8%;
+    position: relative;
+  }
+  .upper {
+    background-image: url(../images/bg-mobile-light.jpg);
+    &__heading {
+      padding: 3rem 0 24px;
+    }
+    &__options {
+      top: 185px;
+      &--opt {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+    }
+  }
+  .crossButton {
+    display: block !important;
+  }
 }

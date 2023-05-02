@@ -49,7 +49,7 @@ body {
   position: relative;
 }
 
-.lightmode {
+.darkmode {
   position: absolute;
   right: 0px;
   display: none;
@@ -197,7 +197,19 @@ body {
   color: hsl(235, 19%, 35%);
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 1200px) {
+  .container {
+    margin: 0 20%;
+    position: relative;
+  }
+  .upper__heading {
+    padding: 4rem 0 1rem;
+  }
+  .upper__options {
+    top: 200px;
+  }
+}
+@media screen and (max-width: 800px) {
   .container {
     margin: 0 8%;
     position: relative;
@@ -211,8 +223,12 @@ body {
   .upper__options {
     top: 185px;
   }
-  .upper__options--opt--center {
-    display: none;
+  .upper__options--opt {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
   .crossButton {
     display: block !important;
